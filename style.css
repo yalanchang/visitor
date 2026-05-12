@@ -131,6 +131,7 @@ body {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -152,6 +153,7 @@ body {
     opacity: 0;
     transform: translateY(-5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -429,6 +431,7 @@ body {
     transform: scale(0);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -443,16 +446,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: calc(80px + env(safe-area-inset-top)) !important;
+    display: block !important;
+  }
+
   .card {
     height: auto !important;
-    max-height: calc(100dvh - 80px) !important;
+    max-height: none !important;
     margin: 40px auto;
     width: 90% !important;
     min-height: auto;
     justify-content: flex-start !important;
     flex-direction: column;
-    display: flex;
     touch-action: none;
+    margin: 0 auto 40px auto !important;
+    margin-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
+    display: block;
   }
 
   .s1-top h1 {
@@ -482,7 +492,6 @@ body {
     overflow-y: auto !important;
     display: flex;
     flex-direction: column;
-    height: fit-content;
   }
 
   .enter-btn {
@@ -520,6 +529,7 @@ body {
   .s1-top h1 {
     font-size: 36px;
   }
+
   .logo-box {
     width: 40px;
     height: 40px;
